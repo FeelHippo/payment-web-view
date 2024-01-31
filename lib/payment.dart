@@ -55,13 +55,27 @@ class _PaymentWidgetState extends State<PaymentWidget> {
       print('Error: $e');
     }
   }
+// to get a new transactionId, uncomment the below curl, copy paste into a terminal
+//   curl --location 'https://api.sandbox.datatrans.com/v1/transactions' \
+//   --header 'Authorization: Basic MTEwMDAyNTgzNTozY29mTjNNeFhhQkg3VWw4' \
+//   --header 'Content-Type: application/json' \
+//   --header 'Host: api.sandbox.datatrans.com' \
+//   --data '{
+//   "currency": "CHF",
+//   "refno": "Test-1234",
+//   "amount": 1000,
+//   "paymentMethods": ["TWI"],
+//   "option": {
+//   "createAlias": true
+//   }
+// }'
 
   @override
   void initState() {
     super.initState();
     // final response = http.get(url);
     // sendPostRequest();
-    transactionId = '240126161244431407';
+    transactionId = '240131144150466710';
   }
 
   @override
